@@ -9,7 +9,7 @@ import zipfile
 import uvicorn
 
 
-app = FastAPI(title='Proyecto Data Movies Ricardo Moreno',
+app = FastAPI(title='Movie Recommendation Project Ricardo Moreno',
               description='API para recomendar Peliculas DSPT01',
             )
 
@@ -22,7 +22,7 @@ indices = None
 
 @app.get('/')
 async def read_root():
-    return {'Proyecto Data Movies by Ricardo Moreno'}
+    return {'Movie Recommendation Project by Ricardo Moreno'}
 
 @app.get('/')
 async def index():

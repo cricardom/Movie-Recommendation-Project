@@ -9,8 +9,8 @@ import zipfile
 import uvicorn
 
 
-app = FastAPI(title='Movie Recommendation Project Ricardo Moreno',
-              description='API para recomendar Peliculas DSPT01',
+app = FastAPI(title='Movie Recommendation Project    by   Ricardo Moreno',
+              description='API para recomendar Peliculas, PROYECTO SOY HENRY DATA SCIENCE PT-01',
             )
 
 # Variables Globales

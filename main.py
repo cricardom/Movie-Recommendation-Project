@@ -171,10 +171,10 @@ def calculate_reduced_similarity_matrix(df):
 
     return reduced_similarity_matrix
 # Inicializar y cargar el DataFrame df
-    df = pd.read_csv('movies_api.csv')
+df = pd.read_csv('./movies_api.zip')
 
 # Calcular la matriz de similitud reducida
-    reduced_similarity_matrix = calculate_reduced_similarity_matrix(df)
+reduced_similarity_matrix = calculate_reduced_similarity_matrix(df)
 
 @app.get('/recomendacion/{titulo}')
 def recomendacion(titulo:str):

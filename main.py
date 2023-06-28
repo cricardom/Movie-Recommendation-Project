@@ -7,6 +7,7 @@ from sklearn.utils.extmath import randomized_svd
 from sklearn.feature_extraction.text import TfidfVectorizer
 import zipfile
 import uvicorn
+import csv
 
 
 app = FastAPI(title='Movie Recommendation Project    by   Ricardo Moreno',
@@ -41,8 +42,6 @@ def extract_data_from_zip(zip_file):
     movies_df = pd.read_csv('movies/movies.csv')
     return movies_df
 
-#df = pd.read_csv("movies.csv", encoding='utf-8',)
-df = pd.read_csv("./movies.csv",encoding='utf-8')
 
 # Función de películas por mes
 @app.get('/peliculas_mes/({mes})')

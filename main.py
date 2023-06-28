@@ -83,7 +83,7 @@ def peliculas_mes(mes:str):
 # Función de películas por día
 @app.get('/peliculas_dia/({dia})')
 def peliculas_dia(dia:str):
-    '''Se ingresa el mes y la funcion retorna la cantidad de peliculas que se estrenaron ese mes'''
+    '''Se ingresa el dia y la funcion retorna la cantidad de peliculas que se estrenaron ese dia'''
         
     days = {'lunes': 'Monday', 'martes': 'Tuesday', 'miercoles': 'Wednesday', 'jueves': 'Thursday', 'viernes': 'Friday', 'sabado': 'Saturday', 'domingo': 'Sunday'}
     day = days[dia.lower()]

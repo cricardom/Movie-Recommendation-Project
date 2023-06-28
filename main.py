@@ -37,7 +37,7 @@ async def about():
 def extract_data_from_zip(zip_file):
    
     with zipfile.ZipFile(zip_file, 'r') as zip_ref:
-        zip_ref.extractall('movies')
+        zip_ref.extractall('movies.cvs')
     # Lectura de data frame
     movies_df = pd.read_csv('movies/movies.csv')
     return movies_df

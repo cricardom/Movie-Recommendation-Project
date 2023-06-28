@@ -37,9 +37,9 @@ async def about():
 def extract_data_from_zip(zip_file):
    
     with zipfile.ZipFile(zip_file, 'r') as zip_ref:
-        zip_ref.extractall('movies.zip')
+        zip_ref.extractall('movies_api')
     # Lectura de data frame
-    movies_df = pd.read_csv('movies/movies.csv')
+    movies_df = pd.read_csv('movies_api/movies_api.csv')
     return movies_df
 
 
@@ -171,10 +171,10 @@ def calculate_reduced_similarity_matrix(df):
 
     return reduced_similarity_matrix
 # Inicializar y cargar el DataFrame df
-df = pd.read_csv('./movies.csv')
+    df = pd.read_csv('movies_api.csv')
 
 # Calcular la matriz de similitud reducida
-reduced_similarity_matrix = calculate_reduced_similarity_matrix(df)
+    reduced_similarity_matrix = calculate_reduced_similarity_matrix(df)
 
 @app.get('/recomendacion/{titulo}')
 def recomendacion(titulo:str):

@@ -21,17 +21,6 @@ count_matrix = None
 cosine_sim = None
 indices = None
 
-@app.get('/')
-async def read_root():
-    return {'Movie Recommendation Project by Ricardo Moreno'}
-
-@app.get('/')
-async def index():
-    return{'API para recomendar Peliculas'}
-
-@app.get('/about/')
-async def about():
-    return {'Proyecto Individual de Data Science Part-Time 01 2023 SOY HENRY'}
 
  # Sacamos el Data frame zipiado
 def extract_data_from_zip(zip_file):
